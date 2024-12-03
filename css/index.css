@@ -55,6 +55,11 @@ body {
   cursor: pointer;
 }
 
+.btns {
+  margin: auto;
+  padding: 10px;
+}
+
 .fill {
   font-size: 30px;
 }
