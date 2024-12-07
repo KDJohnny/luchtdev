@@ -87,6 +87,7 @@ input:checked + .slider:before {
     left: 0;
     background-color: #111; /* Default dark theme background */
     overflow-x: hidden;
+    white-space: nowrap;
     transition: 0.5s;
     padding-top: 60px;
     z-index: 1;
