@@ -5,30 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/index.css">
-    <title>Homepage | Lucht</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Hi Baby Girl :*</title>
 </head>
-<body class="dark-theme">
-<label class="switch">
-    <input type="checkbox" id="theme-toggle" checked>
-    <span class="slider">
-    </span>
-</label>
-<!-- Sidebar Navigation -->
-<div class="sidebar" id="sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
-    <a href="#">Home</a>
-    <a href="#">Über mich</a>
-    <a href="#">Projekte</a>
-    <a href="#">Kontakt</a>
+<body>
+<div class="heart">
+    <i class="fa-solid fa-heart" id="clickable-heart"></i>
 </div>
-
-<!-- Navbar Button -->
-<span class="openbtn" onclick="toggleSidebar()">&#9776;</span>
-<div class="header">
-    <div class="welcome">Willkommen</div>
-    <div class="welcome">
-        <span>auf meiner Webseite!</span>
-    </div>
+<div class="typewriter" id="typewriter-text" class="hidden"></div>
+<div id="button-container" class="hidden">
+    <button id="yes-btn">Yes</button>
+    <button id="no-btn">No</button>
 </div>
 <script src="js/index.js"></script>
 </body>
