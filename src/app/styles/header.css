@@ -18,6 +18,7 @@ header {
   overflow: hidden;
   box-sizing: border-box;
   flex-direction: row-reverse;
+  max-width: 95%;
 }
 
 header nav {
