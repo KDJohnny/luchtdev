@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "LuchtDev: Homepage",
+  description: "",
+};
+
+
 export default function Home() {
   return (
     <main>
