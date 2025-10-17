@@ -3,6 +3,7 @@
 import { useState, type ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import "./styles/globals.css";
 import "./styles/header.css";
