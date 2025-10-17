@@ -3,7 +3,7 @@ export default function Home() {
     <main>
       <h1>Willkommen!</h1>
       <div>
-        Wie geht's?
+        Wie geht es dir?
       </div>
     </main>
   );
