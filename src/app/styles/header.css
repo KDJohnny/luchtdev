@@ -7,16 +7,17 @@ header {
   background: var(--navBackground);
   margin: 1ch;
   height: 5ch;
-  width: 30%;
+  width: 45ch;
   border-radius: 1ch;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: fixed;
   padding: 0 1ch;
   transition: width 0.3s ease, opacity 0.3s ease;
   overflow: hidden;
   box-sizing: border-box;
+  flex-direction: row-reverse;
 }
 
 header nav {
