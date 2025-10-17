@@ -1,0 +1,70 @@
+:root {
+  --navBackground: rgba(0, 0, 0, 0.8);
+  --link: #00bfff;
+}
+
+header {
+  background: var(--navBackground);
+  margin: 1ch;
+  height: 5ch;
+  width: 30%;
+  border-radius: 1ch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 0 1ch;
+  transition: width 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  gap: 1ch;
+  min-width: 0;
+}
+
+header a,
+header button {
+  color: var(--foreground);
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+header a:hover,
+header button:hover {
+  color: var(--link);
+  transform: scale(1.05);
+}
+
+header a.active {
+  color: var(--link);
+  font-weight: bold;
+  border-bottom: 2px solid var(--link);
+}
+
+header button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  flex-shrink: 0;
+}
+
+header.minimized {
+  width: 5ch;
+}
+
+header.minimized nav {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}

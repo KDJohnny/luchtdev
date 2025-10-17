@@ -1,32 +1,42 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+"use client";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { useState, type ReactNode } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import "./styles/globals.css";
+import "./styles/header.css";
+import "./fontawesome";
 
-export const metadata: Metadata = {
-  title: "LuchtDev: Home",
-  description: "Made by Jonathan Lucht",
-};
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
+  const [minimized, setMinimized] = useState(false);
+
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
+        <header className={minimized ? "minimized" : ""}>
+          <nav>
+            <Link href="/" className={pathname === "/" ? "active" : ""}>
+              Homepage
+            </Link>
+            <Link href="/projects" className={pathname === "/projects" ? "active" : ""}>
+              Projects
+            </Link>
+            <Link href="/about" className={pathname === "/about" ? "active" : ""}>
+              About Me
+            </Link>
+            <Link href="/contact" className={pathname === "/contact" ? "active" : ""}>
+              Contact
+            </Link>
+          </nav>
+          <button onClick={() => setMinimized(!minimized)}>
+            <FontAwesomeIcon icon={minimized ? faChevronRight : faChevronLeft} />
+          </button>
+        </header>
         {children}
       </body>
     </html>
