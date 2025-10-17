@@ -13,15 +13,14 @@ import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const [minimized, setMinimized] = useState(false);
 
   return (
     <html lang="en">
       <body>
-        <header className={minimized ? "minimized" : ""}>
+        <header>
           <nav>
             <Link href="/" className={pathname === "/" ? "active" : ""}>
-              Homepage
+              Home
             </Link>
             <Link href="/projects" className={pathname === "/projects" ? "active" : ""}>
               Projects
@@ -33,9 +32,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               Contact
             </Link>
           </nav>
-          <button onClick={() => setMinimized(!minimized)}>
-            <FontAwesomeIcon icon={minimized ? faChevronRight : faChevronLeft} />
-          </button>
         </header>
         {children}
       </body>

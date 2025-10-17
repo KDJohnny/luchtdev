@@ -5,19 +5,16 @@
 
 header {
   background: var(--navBackground);
-  margin: 1ch;
+  top: 1ch;
+  left: 75ch;
   height: 5ch;
   width: 45ch;
   border-radius: 1ch;
   display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   padding: 0 1ch;
-  transition: width 0.3s ease, opacity 0.3s ease;
   overflow: hidden;
   box-sizing: border-box;
-  flex-direction: row-reverse;
   max-width: 95%;
 }
 
@@ -30,8 +27,7 @@ header nav {
   min-width: 0;
 }
 
-header a,
-header button {
+header a {
   color: var(--foreground);
   text-decoration: none;
   transition: color 0.2s ease, transform 0.2s ease;
@@ -41,8 +37,7 @@ header button {
   min-width: 0;
 }
 
-header a:hover,
-header button:hover {
+header a:hover {
   color: var(--link);
   transform: scale(1.05);
 }
@@ -51,22 +46,4 @@ header a.active {
   color: var(--link);
   font-weight: bold;
   border-bottom: 2px solid var(--link);
-}
-
-header button {
-  cursor: pointer;
-  background: none;
-  border: none;
-  font-size: 1.2em;
-  flex-shrink: 0;
-}
-
-header.minimized {
-  width: 5ch;
-}
-
-header.minimized nav {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease;
 }
