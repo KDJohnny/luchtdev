@@ -8,9 +8,6 @@ import "./styles/globals.css";
 import "./styles/header.css";
 import "./fontawesome";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-
 export default function RootLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname();
 
