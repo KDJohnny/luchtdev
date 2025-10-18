@@ -1,3 +1,5 @@
+import "./styles/globals.css";
+
 export const metadata = {
   title: "LuchtDev: Homepage",
   description: "",
@@ -7,8 +9,8 @@ export const metadata = {
 export default function Home() {
   return (
     <main>
-      <h1>Willkommen!</h1>
-      <div>
+      <div className="wrapper">
+        <h1>Willkommen!</h1>
         Wie geht es dir?
       </div>
     </main>
