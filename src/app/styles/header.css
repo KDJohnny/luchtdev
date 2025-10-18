@@ -6,7 +6,8 @@
 header {
   background: var(--navBackground);
   top: 1ch;
-  left: 75ch;
+  left: 50%;
+  transform: translateX(-50%);
   height: 5ch;
   width: 45ch;
   border-radius: 1ch;
@@ -16,6 +17,7 @@ header {
   overflow: hidden;
   box-sizing: border-box;
   max-width: 95%;
+  z-index: 1000;
 }
 
 header nav {
