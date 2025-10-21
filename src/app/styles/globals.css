@@ -15,28 +15,25 @@ body {
 main {
   background: linear-gradient(135deg, #1e1e1e, #00334d);
   min-height: 100vh;
+  min-width: 100%;
+  width: max-content;
   padding-top: 7ch;
   padding-bottom: 7ch;
 }
 
 .wrapper {
   position: relative;
-  border-radius: 1ch;
   left: 50%;
   transform: translateX(-50%);
-  width: 200ch;
-  max-width: 60%;
-  height: max-content;
+  width: fit-content;
+  height: fit-content;
   display: grid;
   align-content: center;
   justify-content: center;
   justify-items: center;
-  box-shadow: 0 0 2ch rgba(0, 0, 0, 0.5);
-  padding: 2ch;
-  background: linear-gradient(135deg, #00111a, #00334d 50%, #00bfff 120%);
   box-sizing: border-box;
 }
 
 .wrapper h1 {
-  font-size: 10ch;
+  font-size: 4em;
 }
