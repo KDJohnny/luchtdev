@@ -1,0 +1,19 @@
+.elevated {
+  position: relative;
+  display: inline-block;
+  color: rgb(0, 191, 255);
+  font-weight: bold;
+  text-shadow: 0 0 1px rgba(0, 191, 255, 0.9),
+               0 0 8px rgba(0, 191, 255, 0.45);
+  z-index: 1;
+}
+
+/* Add the overlapping J */
+.elevated::after {
+  content: "J";
+  position: absolute;
+  right: 5px;
+  color: rgb(232, 10, 221);
+  text-shadow: 0 0 4px rgba(232, 10, 221, 0.6);
+  z-index: -1;
+}

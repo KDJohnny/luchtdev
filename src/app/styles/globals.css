@@ -3,7 +3,6 @@
 :root {
   --background: rgb(53, 53, 53);
   --foreground: #ffffff;
-  --box-color: #00bfff;
 }
 
 body {
@@ -17,23 +16,19 @@ main {
   min-height: 100vh;
   min-width: 100%;
   width: max-content;
-  padding-top: 7ch;
+  padding-top: 20ch;
   padding-bottom: 7ch;
 }
 
 .wrapper {
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: fit-content;
-  height: fit-content;
-  display: grid;
-  align-content: center;
-  justify-content: center;
-  justify-items: center;
   box-sizing: border-box;
+  margin-left: 8ch;
 }
 
 .wrapper h1 {
   font-size: 4em;
+  background-image: radial-gradient(white, grey);
+  color: transparent;
+  background-clip: text;
 }
