@@ -20,13 +20,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               Home
             </Link>
             <Link href="/projects" className={pathname === "/projects" ? "active" : ""}>
-              Projects
+              Projekte
             </Link>
             <Link href="/about" className={pathname === "/about" ? "active" : ""}>
-              About Me
+              Über mich
             </Link>
             <Link href="/contact" className={pathname === "/contact" ? "active" : ""}>
-              Contact
+              Kontakt
             </Link>
           </nav>
         </header>
