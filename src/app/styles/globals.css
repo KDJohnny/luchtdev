@@ -25,6 +25,7 @@ main {
   position: relative;
   box-sizing: border-box;
   margin-left: 8ch;
+  width: fit-content;
 }
 
 .wrapper h1 {
