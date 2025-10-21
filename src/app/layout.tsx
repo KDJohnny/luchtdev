@@ -31,6 +31,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </nav>
         </header>
         {children}
+        <div className="ocean">
+          <div className="wave"></div>
+          <div className="wave"></div>
+        </div>
       </body>
     </html>
   );
