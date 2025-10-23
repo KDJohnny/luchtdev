@@ -25,9 +25,6 @@ main {
   position: relative;
   box-sizing: border-box;
   margin-left: clamp(24px, 8vw, 80px);
-}
-
-.wrapper h1 {
   font-size: clamp(24px, 8vw, 60px);
   background-image: radial-gradient(white, silver);
   color: transparent;
