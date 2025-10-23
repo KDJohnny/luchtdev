@@ -12,8 +12,9 @@
 .elevated::after {
   content: "J";
   position: absolute;
-  right: 5px;
+  right: 0.3vw;
   color: rgb(232, 10, 221);
+  font-weight: bold;
   text-shadow: 0 0 4px rgba(232, 10, 221, 0.6);
   z-index: -1;
 }
