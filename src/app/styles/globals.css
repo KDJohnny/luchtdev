@@ -9,16 +9,14 @@ body {
   background: linear-gradient(#0084b0, #00334d);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
   overflow-x: hidden;
 }
 
 main {
   min-height: 100vh;
-  min-width: 100%;
   width: fit-content;
-  padding-top: 20ch;
-  padding-bottom: 7ch;
+  padding-top: 20vh;
+  padding-bottom: 7vh;
 }
 
 .wrapper {
