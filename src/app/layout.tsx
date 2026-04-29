@@ -1,41 +1,32 @@
-"use client";
+import type { Metadata } from "next";
+import { Inter, JetBrains_Mono } from "next/font/google";
+import "./globals.css";
 
-import { type ReactNode } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-syne",
+});
 
-import "./styles/globals.css";
-import "./styles/header.css";
-import "./fontawesome";
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  variable: "--font-mono",
+});
 
-export default function RootLayout({ children }: { children: ReactNode }) {
-  const pathname = usePathname();
+export const metadata: Metadata = {
+  title: "Portfolio | Software Engineer",
+  description: "Portfolio of a passionate software engineer",
+};
 
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en">
-      <body>
-        <header>
-          <nav>
-            <Link href="/" className={pathname === "/" ? "active" : ""}>
-              Home
-            </Link>
-            <Link href="/projects" className={pathname === "/projects" ? "active" : ""}>
-              Projekte
-            </Link>
-            <Link href="/about" className={pathname === "/about" ? "active" : ""}>
-              Über mich
-            </Link>
-            <Link href="/contact" className={pathname === "/contact" ? "active" : ""}>
-              Kontakt
-            </Link>
-          </nav>
-        </header>
-        {children}
-        <div className="ocean">
-          <div className="wave"></div>
-          <div className="wave"></div>
-        </div>
-      </body>
+    <html lang="de" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

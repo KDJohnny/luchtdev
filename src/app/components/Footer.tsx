@@ -1,0 +1,90 @@
+"use client";
+export default function Footer() {
+  return (
+    <footer
+      id="contact"
+      style={{
+        borderTop: "1px solid rgba(255,255,255,0.06)",
+        padding: "4rem 2.5rem 3rem",
+        textAlign: "center",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      <div style={{
+        position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)",
+        width: 300, height: 200,
+        background: "radial-gradient(circle, rgba(0,212,255,0.05) 0%, transparent 70%)",
+        pointerEvents: "none",
+      }} />
+
+      <div style={{ maxWidth: "600px", margin: "0 auto", position: "relative" }}>
+        <div style={{ fontSize: "11px", color: "#475569", letterSpacing: "0.15em", marginBottom: "1rem" }}>
+          GET_IN_TOUCH
+        </div>
+        <h3 style={{
+          fontFamily: "var(--font-syne), sans-serif",
+          fontSize: "2.5rem", fontWeight: 800,
+          color: "#f1f5f9", marginBottom: "1rem",
+          lineHeight: 1.1,
+        }}>
+          Lass uns zusammen{" "}
+          <span style={{
+            background: "linear-gradient(135deg, #00d4ff, #7c3aed)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}>
+            etwas bauen
+          </span>
+        </h3>
+        <p style={{ fontSize: "13px", color: "#64748b", marginBottom: "2.5rem", lineHeight: 1.7 }}>
+          Offen für Freelance-Projekte und spannende Kooperationen.
+        </p>
+        <a
+          href="mailto:lucht@luchtdev.de"
+          style={{
+            display: "inline-block",
+            padding: "14px 36px",
+            background: "linear-gradient(135deg, #00d4ff, #0099cc)",
+            color: "#080b11",
+            fontWeight: 700, fontSize: "13px",
+            letterSpacing: "0.08em",
+            textDecoration: "none",
+            fontFamily: "var(--font-mono), monospace",
+            boxShadow: "0 0 40px rgba(0,212,255,0.25)",
+            transition: "all 0.25s",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = "0 0 60px rgba(0,212,255,0.5)";
+            e.currentTarget.style.transform = "translateY(-2px)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = "0 0 40px rgba(0,212,255,0.25)";
+            e.currentTarget.style.transform = "translateY(0)";
+          }}
+        >
+          lucht@luchdev.de
+        </a>
+
+        <div style={{ display: "flex", justifyContent: "center", gap: "1.5rem", marginTop: "2.5rem" }}>
+          {["GitHub", "LinkedIn", "Twitter"].map((s) => (
+            <a key={s} href="#" style={{
+              fontSize: "11px", color: "#475569", textDecoration: "none",
+              letterSpacing: "0.08em", transition: "color 0.2s",
+            }}
+              onMouseEnter={(e) => e.currentTarget.style.color = "#00d4ff"}
+              onMouseLeave={(e) => e.currentTarget.style.color = "#475569"}
+            >
+              {s}
+            </a>
+          ))}
+        </div>
+
+        <div style={{ marginTop: "3rem", fontSize: "11px", color: "#334155", letterSpacing: "0.06em" }}>
+          © 2026 Jonathan Lucht — built with Next.js & TypeScript
+        </div>
+      </div>
+    </footer>
+  );
+}
