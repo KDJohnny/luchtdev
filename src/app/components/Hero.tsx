@@ -124,8 +124,7 @@ export default function Hero() {
             marginBottom: "2.5rem",
             opacity: 0,
           }}>
-            Ich entwickle skalierbare Webanwendungen und custom Software mit sauberem Code und modernen Technologien.
-            <p></p>Leidenschaft für neue Herausforderungen.
+            Ich entwickle skalierbare Webanwendungen und custom Software mit sauberem Code und modernen Technologien und habe eine Leidenschaft für neue Herausforderungen.
           </p>
 
           {/* Buttons */}
