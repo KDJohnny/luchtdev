@@ -28,9 +28,7 @@ const categories = [
   },
 ];
 
-const tools = [
-  "Git", "VS Code", "Linux", "Windows", "Vercel",
-];
+const tools = ["Git", "VS Code", "Linux", "Windows", "Vercel"];
 
 export default function Skills() {
   const [active, setActive] = useState(0);
@@ -53,14 +51,13 @@ export default function Skills() {
     <section
       ref={sectionRef}
       id="skills"
-      style={{ padding: "8rem 0", position: "relative", overflow: "hidden" }}
+      style={{ padding: "6rem 0", position: "relative", overflow: "hidden" }}
     >
-
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 2.5rem" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
 
         {/* Section header */}
         <div style={{
-          marginBottom: "4rem",
+          marginBottom: "3rem",
           opacity: visible ? 1 : 0,
           transform: visible ? "translateY(0)" : "translateY(24px)",
           transition: "all 0.7s ease",
@@ -72,7 +69,7 @@ export default function Skills() {
           </div>
           <h2 style={{
             fontFamily: "var(--font-syne), sans-serif",
-            fontSize: "clamp(2rem, 4vw, 3.5rem)",
+            fontSize: "clamp(1.8rem, 6vw, 3.5rem)",
             fontWeight: 800, color: "#f1f5f9",
             letterSpacing: "-0.02em", lineHeight: 1.1,
           }}>
@@ -86,30 +83,38 @@ export default function Skills() {
           </h2>
         </div>
 
-        {/* Tab selector */}
-        <div style={{
-          display: "flex", gap: "4px", marginBottom: "3rem",
-          borderBottom: "1px solid rgba(255,255,255,0.06)",
-          opacity: visible ? 1 : 0,
-          transition: "opacity 0.7s ease 0.2s",
-        }}>
+        {/* Tab selector — scrollable on mobile */}
+        <div
+          style={{
+            display: "flex", gap: "0",
+            marginBottom: "2rem",
+            borderBottom: "1px solid rgba(255,255,255,0.06)",
+            overflowX: "auto",
+            WebkitOverflowScrolling: "touch",
+            scrollbarWidth: "none",
+            opacity: visible ? 1 : 0,
+            transition: "opacity 0.7s ease 0.2s",
+          }}
+          className="skills-tabs"
+        >
           {categories.map((c, i) => (
             <button
               key={c.label}
               onClick={() => setActive(i)}
               style={{
-                display: "flex", alignItems: "center", gap: "8px",
-                padding: "12px 20px",
+                display: "flex", alignItems: "center", gap: "6px",
+                padding: "10px 16px",
                 background: "transparent", border: "none",
                 borderBottom: active === i ? `2px solid ${c.color}` : "2px solid transparent",
                 color: active === i ? c.color : "#475569",
-                fontSize: "12px",
+                fontSize: "11px",
                 fontFamily: "var(--font-mono), monospace",
                 letterSpacing: "0.06em", cursor: "pointer",
                 transition: "all 0.2s", marginBottom: "-1px",
+                whiteSpace: "nowrap", flexShrink: 0,
               }}
             >
-              <span style={{ fontSize: "14px" }}>{c.icon}</span>
+              <span style={{ fontSize: "13px" }}>{c.icon}</span>
               {c.label}
             </button>
           ))}
@@ -117,7 +122,7 @@ export default function Skills() {
 
         {/* Skill tags */}
         <div style={{
-          padding: "2rem",
+          padding: "1.5rem",
           border: "1px solid rgba(255,255,255,0.07)",
           background: "rgba(255,255,255,0.02)",
           position: "relative", overflow: "hidden",
@@ -129,21 +134,21 @@ export default function Skills() {
           <div style={{ position: "absolute", top: 0, left: 0, width: 20, height: 20, borderTop: `2px solid ${cat.color}`, borderLeft: `2px solid ${cat.color}` }} />
           <div style={{ position: "absolute", bottom: 0, right: 0, width: 20, height: 20, borderBottom: `2px solid ${cat.color}`, borderRight: `2px solid ${cat.color}` }} />
 
-          <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "1.75rem" }}>
-            <span style={{ fontSize: "22px", color: cat.color }}>{cat.icon}</span>
-            <span style={{ fontFamily: "var(--font-syne), sans-serif", fontWeight: 700, fontSize: "16px", color: "#f1f5f9" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "1.5rem" }}>
+            <span style={{ fontSize: "20px", color: cat.color }}>{cat.icon}</span>
+            <span style={{ fontFamily: "var(--font-syne), sans-serif", fontWeight: 700, fontSize: "15px", color: "#f1f5f9" }}>
               {cat.label}
             </span>
           </div>
 
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
             {cat.skills.map((s) => (
               <span
                 key={s}
                 style={{
-                  padding: "8px 18px",
+                  padding: "7px 14px",
                   border: `1px solid ${cat.color}33`,
-                  fontSize: "13px", color: cat.color,
+                  fontSize: "12px", color: cat.color,
                   letterSpacing: "0.04em",
                   background: `${cat.color}0a`,
                   fontFamily: "var(--font-mono), monospace",
@@ -166,12 +171,12 @@ export default function Skills() {
 
         {/* Tools / Tags */}
         <div style={{
-          marginTop: "3.5rem",
+          marginTop: "3rem",
           opacity: visible ? 1 : 0,
           transform: visible ? "translateY(0)" : "translateY(16px)",
           transition: "all 0.6s ease 0.6s",
         }}>
-          <div style={{ fontSize: "11px", color: "#475569", letterSpacing: "0.15em", marginBottom: "1.2rem" }}>
+          <div style={{ fontSize: "11px", color: "#475569", letterSpacing: "0.15em", marginBottom: "1rem" }}>
             TOOLS & ENVIRONMENTS
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
@@ -179,7 +184,7 @@ export default function Skills() {
               <span
                 key={t}
                 style={{
-                  padding: "5px 14px",
+                  padding: "5px 12px",
                   border: "1px solid rgba(255,255,255,0.08)",
                   fontSize: "11px", color: "#64748b",
                   letterSpacing: "0.06em",
@@ -203,6 +208,10 @@ export default function Skills() {
           </div>
         </div>
       </div>
+
+      <style>{`
+        .skills-tabs::-webkit-scrollbar { display: none; }
+      `}</style>
     </section>
   );
 }
