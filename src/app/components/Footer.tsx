@@ -56,11 +56,11 @@ export default function Footer() {
           fontSize: "13px", color: "#64748b",
           marginBottom: "2rem", lineHeight: 1.7,
         }}>
-          Offen für Freelance-Projekte und spannende Kooperationen.
+          Aufgrund eines fehlenden Impressums und Datenschutzes auf dieser Seite wird zurzeit keine Kontaktaufnahme angeboten.
         </p>
 
         <a
-          href="mailto:lucht@luchtdev.de"
+          href="mailto:"
           style={{
             display: "inline-block",
             padding: "13px 28px",
@@ -83,7 +83,7 @@ export default function Footer() {
             e.currentTarget.style.transform = "translateY(0)";
           }}
         >
-          lucht@luchtdev.de
+          Keine Kontaktaufnahme möglich
         </a>
 
         {/* Social Links */}
